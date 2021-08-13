@@ -24,14 +24,22 @@ namespace LinqExercise
              */
 
             //Print the Sum and Average of numbers
+            var sumOfNumbers = numbers.Sum(sum => sum);
 
             //Order numbers in ascending order and decsending order. Print each to console.
 
+            var accNumbers = numbers.OrderBy(num => num);
+            var desNumbers = numbers.OrderBy(num => num);
+
+
             //Print to the console only the numbers greater than 6
+            var greaterThanSix = numbers.Where(num => num > 6);
 
             //Order numbers in any order (acsending or desc) but only print 4 of them **foreach loop only!**
+            var accListfour = numbers.OrderBy(num => num).Take(4);
 
             //Change the value at index 4 to your age, then print the numbers in decsending order
+            var changedNumbers = numbers.Select(num => numbers[2] = 52).OrderBy(num => num);
 
             // List of employees ***Do not remove this***
             var employees = CreateEmployees();
